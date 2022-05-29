@@ -20,7 +20,7 @@ body{
     font-weight: bold;
 }
 
-.options{
+.input{
     margin-top: 1.5rem;
     text-align: center;
 
@@ -32,10 +32,22 @@ body{
 
     border: 0.3rem solid green;
 }
-.options div{
+.options{
+    display: flex;
+    font-weight: 600;
+}
+.options input {
+    margin-top: 1rem;
+    height: 10rem;
+    width: 10rem;
+    border: 3px solid black;
+    border-radius: 10%;
+
+}
+.input div{
     margin: 0.5rem;
 }
-.options p{
+.input p{
     font-size: 1.6rem;
 }
 #boton{
@@ -60,11 +72,18 @@ body{
     border: 0.3rem solid darkblue;
     display: flex;
     justify-content: space-evenly;
+
+    flex-flow: row wrap;
+
 }
 .box {
     height: 10rem;
     width: 10rem;
     border: 0.3rem solid black;
-    margin: 0 2rem;
+    border-radius: 10%;
+    margin: 1rem;
 
+
+    min-width: 100px;
+    max-width: 100px;
 }
