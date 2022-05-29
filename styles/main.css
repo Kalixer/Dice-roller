@@ -37,6 +37,12 @@ body{
     font-weight: 600;
 }
 .options input {
+
+    text-align: center;
+
+    font-size: 3rem;
+    font-weight: 900;
+
     margin-top: 1rem;
     height: 10rem;
     width: 10rem;
@@ -83,7 +89,39 @@ body{
     border-radius: 10%;
     margin: 1rem;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 900;
 
     min-width: 100px;
     max-width: 100px;
+}
+
+
+/* Animation */
+
+/*
+    It doesn't work the animation
+    Maybe we need a plugin to compile css
+*/
+
+.loader-wrapper{
+    width: 6rem;
+    height: 6rem;
+}
+.loader{
+    width: 100%;
+    height: 100%;
+    border: 1rem solid #162534;
+    border-top-color: #4bc8eb;
+    border-bottom-color: #f13a8f;
+    border-radius: 50%;
+    animation: rotate 5s linear infinite;
+}
+.loader-inner{
+    border-top-color: #36f372;
+    border-bottom-color: #7f33d4;
+    animation-duration: 2.5s;
 }
