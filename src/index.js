@@ -3,6 +3,7 @@ import '../styles/main.css'
 const dice_A = document.getElementById('dados_cantidad');
 const dice_R = document.getElementById('dados_rango');
 
+const result_text = document.getElementById('result');
 const output = document.getElementById('output');
 
 const boton = document.getElementById("boton")
@@ -14,24 +15,41 @@ function throwDice()
     let diceRange = dice_R.value;
 
     let resultado;
-    
-    output.innerHTML = `
-    <div class="loader-wrapper" id="loader-w">
-        <div class="loader">
-            <div class="loader loader-inner"></div>
-        </div>
+
+    setInterval(output.innerHTML = `
+    <div class="loader" id="loader">
+        <p>Loading...<p>
     </div>
-    `
+`, 300)
     
     setTimeout(() => {
         output.innerHTML = ``
+
         for(let i = 0; i < diceAmount; i++) {
             resultado = randomNumber(1, diceRange);
             
-            output.innerHTML += `<div class="box">${resultado}</div>`
+            output.innerHTML += `
+            <div class="box">${resultado}</div>
+            `
         }
-    }, 4000)
+        result_text.innerHTML = `
+        &#128071; These are the results &#128071;
+        `
+    }, 3000)
 }
+
+// function load() {
+//     let numbers = 1;
+//     let dot = '.';
+//     let dots = '${dot}'
+
+//     for (let i = 0; i <= 3; i++) {
+        
+        
+//         numbers++;
+
+//     }
+// }
 
 function randomNumber(min, max){
     const numero_r = Math.floor(Math.random() * (max - min + 1)) + min;
