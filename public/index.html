@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dice Roller</title>
 </head>
 <body>
     <div class="encabezado">
@@ -16,20 +16,18 @@
         <div class="options">
             <div class="dices"> 
                 <p>How many dices</p>
-                <input type="number" id="dados_cantidad">
+                <input type="text" id="dados_cantidad">
             </div>
             <div class="numbers"> 
                 <p>Numbers per dice</p>
-                <input type="number" id="dados_rango">
+                <input type="text" id="dados_rango">
             </div>
         </div>
-        <button type="button" id="boton">Shoot</button>
+        <button type="button" id="boton">Throw dices</button>
     </div>
     <div id="main">
-        <div>
-            <p id="result"></p>
-            <div class="output" id="output"></div>
-        </div>
+        <p class="result" id="result"></p>
+        <div class="output" id="output"></div>
     </div>
 </body>
 </html>

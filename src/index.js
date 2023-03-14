@@ -11,16 +11,21 @@ boton.addEventListener('click', throwDice)
 
 function throwDice()
 {
+    // This is for, when you want to throw again it reloads the text '&#128071; These are the results &#128071'
+    result_text.innerHTML = ``
+
+
     let diceAmount = dice_A.value;
     let diceRange = dice_R.value;
 
     let resultado;
+    let loader = `
+        <div class="loader" id="loader">
+            <p>Loading...<p>
+        </div>
+    `
 
-    setInterval(output.innerHTML = `
-    <div class="loader" id="loader">
-        <p>Loading...<p>
-    </div>
-`, 300)
+    output.innerHTML = loader
     
     setTimeout(() => {
         output.innerHTML = ``
@@ -35,7 +40,7 @@ function throwDice()
         result_text.innerHTML = `
         &#128071; These are the results &#128071;
         `
-    }, 3000)
+    }, 1000)
 }
 
 // function load() {
@@ -63,7 +68,7 @@ function randomNumber(min, max){
 /*
 
     1) Agregar las variables input
-    2) Conctarlos a la funcion
+    2) Conectarlos a la funcion
     3) Construir los bloques con .innerHtml
     
 */
