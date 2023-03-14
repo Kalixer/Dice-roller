@@ -1,0 +1,50 @@
+.dado {
+    height: 10rem;
+    width: 10rem;
+    border: 0.1rem solid white;
+    background-color: #af102e;
+    color: white;
+    border-radius: 10%;
+    margin: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    min-width: 100px;
+    max-width: 100px;
+
+}
+
+.dado-border {
+    margin: 5px;
+    width: 90px;
+    height: 90px;
+    
+    /* border: black 1px solid; */
+    
+    
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.dot {
+    margin: 3px 3px;
+    height: 20px;
+    width: 20px;
+    
+    background-color: white;
+
+    border: solid black 1px;
+
+    border-radius: 50%;
+}
+.dotgohst {
+    margin: 3px 3px;
+
+    /* border: solid black 1px; */
+    border-radius: 50%;
+
+    height: 20px;
+    width: 20px;
+}

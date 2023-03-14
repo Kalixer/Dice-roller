@@ -1,4 +1,6 @@
 import '../styles/main.css'
+import '../styles/dados.css'
+import dices from '../assets/dices.js'
 
 const dice_A = document.getElementById('dados_cantidad');
 const dice_R = document.getElementById('dados_rango');
@@ -11,7 +13,7 @@ boton.addEventListener('click', throwDice)
 
 function throwDice()
 {
-    // This is for, when you want to throw again it reloads the text '&#128071; These are the results &#128071'
+    // This is for, when you want to throw again it reloads the text 'These are the results'
     result_text.innerHTML = ``
 
 
@@ -33,14 +35,27 @@ function throwDice()
         for(let i = 0; i < diceAmount; i++) {
             resultado = randomNumber(1, diceRange);
             
-            output.innerHTML += `
-            <div class="box">${resultado}</div>
-            `
+            switch (resultado){
+                case 1: output.innerHTML += `${dices[0]}`
+                break;
+                case 2: output.innerHTML += `${dices[1]}`
+                break;
+                case 3: output.innerHTML += `${dices[2]}`
+                break;
+                case 4: output.innerHTML += `${dices[3]}`
+                break;
+                case 5: output.innerHTML += `${dices[4]}`
+                break;
+                case 6: output.innerHTML += `${dices[5]}`
+                break;
+                
+            }
+
         }
         result_text.innerHTML = `
         &#128071; These are the results &#128071;
         `
-    }, 1000)
+    }, 100)
 }
 
 // function load() {

@@ -90,24 +90,7 @@ body{
     flex-flow: row wrap;
 
 }
-.box {
-    height: 10rem;
-    width: 10rem;
-    border: 0.2rem solid white;
-    background-color: #af102e;
-    color: white;
-    border-radius: 10%;
-    margin: 1rem;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-    font-weight: 900;
-
-    min-width: 100px;
-    max-width: 100px;
-}
 
 
 /* Animation */
