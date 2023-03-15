@@ -3,28 +3,44 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+    devtool: 'source-map',
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'main.js'
+        filename: 'main.js',
+        publicPath: '/'
     },
+    mode: 'production',
     resolve: {
         extensions: ['.js'],
     },
     module: {
         rules: [
             {
-                test: /\.m?js$/,
+                test: /\.(js|jsx)/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'
                 }
             },
             {
-                test: /\.css$/i,
+                test: /\,(png|svg|jpg|gif)$/,
+                type: 'asset',
+            },
+            {
+                test: /\.html$/,
                 use: [
-                    'style-loader',
-                    'css-loader'
+                    {
+                        loader: 'html-loader'
+                    }
+                ]
+            },
+            {
+                test: /\.(css|scss)$/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader",
                 ]
             }
         ]
@@ -35,6 +51,8 @@ module.exports = {
             template: './public/index.html',
             filename: 'index.html'
         }),
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin({
+            filename: '[name].css'
+        }),
     ]
 }
