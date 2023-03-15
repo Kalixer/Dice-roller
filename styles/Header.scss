@@ -1,5 +1,31 @@
 .Nav {
     height: 10vh;
     width: 100vw;
-    background-color: azure;
+    background-color: black;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.button-home {
+    margin-left: 20px;
+    color: azure;
+
+    height: 40px;
+    width: 80px;
+
+    font-size: 2rem;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-home:hover {
+    color: blue;
+    border: 2px blue solid;
+    border-radius: 10px;
+    cursor: pointer;
 }
