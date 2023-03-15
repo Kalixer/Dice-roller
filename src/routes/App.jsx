@@ -1,14 +1,16 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react";
-import Layout from "../containers/Layout";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home"
+import Layout from "../containers/Layout";
+
+import "../../styles/global.css"
 
 
 const App = () => {
-    const initialState = useInitalState();
+    // const initialState = useInitalState();
 
     return (
-        <AppContext.Provider value={initialState}>
+        // <AppContext.Provider value={initialState}>
             <BrowserRouter>
                 <Layout>
                     <Routes>
@@ -16,6 +18,8 @@ const App = () => {
                     </Routes>
                 </Layout>
             </BrowserRouter>
-        </AppContext.Provider>
+        // </AppContext.Provider>
     )
 }
+
+export default App;

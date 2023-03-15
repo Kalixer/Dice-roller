@@ -1,0 +1,28 @@
+.Choose-dice {
+    height: 70vh;
+    width: 100vw;
+
+    background-color: #555555;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Type {
+    margin: 80px;
+
+    height: 120px;
+    width: 250px;
+
+    border: 3px solid white;
+    border-radius: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}

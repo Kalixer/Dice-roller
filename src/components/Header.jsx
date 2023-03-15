@@ -6,3 +6,5 @@ const Header = () => {
         <nav className="Nav"></nav>
     )
 }
+
+export default Header;

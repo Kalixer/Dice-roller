@@ -3,28 +3,27 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    devtool: 'source-map',
     entry: './src/index.js',
+    devtool: 'source-map',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'main.js',
-        publicPath: '/'
+        filename: 'bundle.js',
     },
-    mode: 'production',
+    mode: 'development',
     resolve: {
-        extensions: ['.js'],
+        extensions: ['.js', '.jsx'],
     },
     module: {
         rules: [
             {
-                test: /\.(js|jsx)/,
+                test: /\.(js|jsx)?$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'
                 }
             },
             {
-                test: /\,(png|svg|jpg|gif)$/,
+                test: /\.(png|svg|jpg|gif)$/,
                 type: 'asset',
             },
             {
