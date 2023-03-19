@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "../containers/Layout";
 import Home from "../pages/Home"
 import NormalDice from "../pages/NormalDice";
+import RoleDice from "../pages/RoleDice";
 import NotFound from "../pages/NotFound"
 
 import "../../styles/global.css"
@@ -18,6 +19,7 @@ const App = () => {
                     <Routes>
                         <Route exact path="/" element={<Home/>} />
                         <Route exact path="/normal" element={<NormalDice/>} />
+                        <Route exact path="/role" element={<RoleDice/>} />
 					    <Route path="*" element={<NotFound/>} />
                     </Routes>
                 </Layout>

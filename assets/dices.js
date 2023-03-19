@@ -1,4 +1,4 @@
-import '../styles/main.css'
+import '../styles/global.css'
 import '../styles/dados.css'
 
 const dot = `<div class="dot"></div>`
@@ -52,6 +52,14 @@ dices.push(four)
 dices.push(five)
 dices.push(six)
 
+export default dices;
+
+
+
+/* 
+Todo esto para abajo es el código que hacía funcionar la varsión antes de React.
+Ya está copiado y estoy tratando de implementarlo en otro archivo... 
+Aunque creo que debería ponerlo en un hook pero cada cosa en su momento
 
 const dice_A = document.getElementById('dados_cantidad');
 const dice_R = document.getElementById('dados_rango');
@@ -119,4 +127,4 @@ function randomNumber(min, max){
 
 
 
-
+*/
