@@ -7,8 +7,8 @@ module.exports = {
     devtool: 'source-map',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
-        publicPath: '/'
+        filename: 'Dice-roller/bundle.js',
+        publicPath: '/Dice-roller/'
     },
     mode: 'development',
     resolve: {
