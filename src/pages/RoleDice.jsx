@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Resultado from '../components/Resultado';
+import Resultado from '@components/Resultado';
 import '@styles/RoleDice.scss';
 
 const NormalDice = () => {

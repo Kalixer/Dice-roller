@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "../containers/Layout";
-import Home from "../pages/Home"
-import NormalDice from "../pages/NormalDice";
-import RoleDice from "../pages/RoleDice";
-import NotFound from "../pages/NotFound"
+import Layout from "@containers/Layout";
+import Home from "@pages/Home"
+import NormalDice from "@pages/NormalDice";
+import RoleDice from "@pages/RoleDice";
+import NotFound from "@pages/NotFound"
 
-import "../../styles/global.css"
+import "@styles/global.css"
 
 
 const App = () => {
