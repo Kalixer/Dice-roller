@@ -46,10 +46,8 @@
     filter: drop-shadow(16px 16px 10px black);
 }
 
-// .Type :nth-child(1) {
-//     background-image: url('../assets/red-dices.jpg');
-// }
-
-// .Type :nth-child(2) {
-//     background-image: url('../assets/role-dice.jpg');
-// }
+@media (max-width: 600px) {
+    .Choose-dice{
+        flex-direction: column;
+    }
+}
