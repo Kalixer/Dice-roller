@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ButtonThrow from '@components/ButtonThrow';
 
 import '@styles/global.css';

@@ -38,7 +38,7 @@ const Resultado = () => {
     
     
     return (
-        <div id="main">
+        <div className="main">
             <p className="result" id="result">&#128071; These are the results &#128071;</p>
             <div className="output" id="output">{output}</div>
         </div>

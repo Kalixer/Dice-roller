@@ -39,7 +39,6 @@ const NormalDice = () => {
                 </div>
                 <ButtonThrow/>
             </div>
-            {showComponent && <Resultado />}
         </>
     )
 }
