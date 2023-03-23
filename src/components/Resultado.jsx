@@ -8,32 +8,31 @@ function randomNumber(min, max){
     return numero_r;
 }
 
-const number = typeof(0)
+
+let rango = 0; // This is for when you choose the 'normal dice', it doesn't crash the app because the input for the range doesn't exist. You let it here by default
 
 const Resultado = () => {
     const dice_A = document.getElementById('dados_cantidad');
-    const dice_B = document.getElementById('dados_rango');
-    const rango = parseInt(dice_B.value)
+    const dice_B = document.getElementById('dados_rango'); // This value is null if you choose the 'normal dice'
+
+    // If you choose the 'normal dice' you don't input a range of numbers. So this conditional evaluates, if the data exist you assing the data.
+    if(dice_B != null) {
+        rango = parseInt(dice_B.value) // If exists, you assing the value
+    }
     
     const dice_amount = parseInt(dice_A.value);
-    console.log(typeof(dice_amount))
-    console.log(dice_amount)
 
     const output = [];
 
-    if(rango <= 6){    
-        console.log(-6)
+    if(rango <= 6){
         for(let i = 0; i < dice_amount; i++){
             output.push(dices[randomNumber(0, 5)])
         }
 
     } else {
-        console.log(+6)
-
         for(let i = 0; i < dice_amount; i++){
             output.push(<div className="dado">{randomNumber(1, rango)}</div>)
         }
-        //;
     }
 
     
