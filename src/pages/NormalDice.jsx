@@ -12,7 +12,7 @@ const NormalDice = () => {
     return (
         <>
             <div className="encabezado">
-                <h1>Dice roller</h1>
+                <h1>Normal Dices</h1>
                 <p className="e-paragraph">Choose how many dices you want</p>
             </div>
             <div className="input">
