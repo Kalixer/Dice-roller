@@ -14,12 +14,12 @@ const App = () => {
 
     return (
         // <AppContext.Provider value={initialState}>
-            <BrowserRouter basename="/Dice-roller/">
+            <BrowserRouter>
                 <Layout>
                     <Routes>
-                        <Route exact path="/Dice-roller" element={<Home/>} />
-                        <Route exact path="/Dice-roller/normal" element={<NormalDice/>} />
-                        <Route exact path="/Dice-roller/role" element={<RoleDice/>} />
+                        <Route exact path="/" element={<Home/>} />
+                        <Route exact path="/normal" element={<NormalDice/>} />
+                        <Route exact path="/role" element={<RoleDice/>} />
 					    <Route path="*" element={<NotFound/>} />
                     </Routes>
                 </Layout>
