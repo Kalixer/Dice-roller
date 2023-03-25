@@ -32,7 +32,7 @@ const Resultado = () => {
 
     } else {
         for(let i = 0; i < dice_amount; i++){
-            output.push(<div className="dado">{randomNumber(1, rango)}</div>)
+            output.push(<div className="dado dado-role">{randomNumber(1, rango)}</div>)
         }
     }
 
