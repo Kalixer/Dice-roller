@@ -2,6 +2,7 @@ import React from 'react';
 import ButtonThrow from '@components/ButtonThrow';
 
 import '@styles/global.css';
+import '@styles/NormalDice.scss';
 
 const NormalDice = () => {
     

@@ -17,25 +17,22 @@ const Resultado = () => {
     const dice_B = document.getElementById('dados_rango'); // This value is null if you choose the 'normal dice'
 
     // If you choose the 'normal dice' you don't input a range of numbers. So this conditional evaluates, if the data exist you assing the data.
-    if(dice_B != null) {
-        rango = parseInt(dice_B.value) // If exists, you assing the value
-    }
-    
     const dice_amount = parseInt(dice_A.value);
 
     const output = [];
 
-    if(rango <= 6){
+    if(dice_B != null) {
+        rango = parseInt(dice_B.value) // If exists, you assing the value
+        
+        for(let i = 0; i < dice_amount; i++){
+            output.push(<div className="dado dado-role">{randomNumber(1, rango)}</div>)
+        }
+    } else {
         for(let i = 0; i < dice_amount; i++){
             output.push(dices[randomNumber(0, 5)])
         }
 
-    } else {
-        for(let i = 0; i < dice_amount; i++){
-            output.push(<div className="dado">{randomNumber(1, rango)}</div>)
-        }
     }
-
     
     
     return (
