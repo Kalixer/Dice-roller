@@ -4,7 +4,7 @@ import '@styles/global.css';
 const NotFound = () => {
     return (
         <>
-            <H1>404 Not Found</H1>
+            <h1>404 Not Found</h1>
         </>
     )
 }
