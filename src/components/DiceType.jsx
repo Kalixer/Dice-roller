@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import redDices from '@assets/redDices.jpg';
+import redDices from '../../assets/redDices.jpg';
 import roleDices from '@assets/roleDices.jpg';
 import '@styles/DiceType.scss';
 
