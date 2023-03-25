@@ -9,9 +9,10 @@ function randomNumber(min, max){
 }
 
 
-let rango = 0; // This is for when you choose the 'normal dice', it doesn't crash the app because the input for the range doesn't exist. You let it here by default
 
 const Resultado = () => {
+    let rango = 0; // This is for when you choose the 'normal dice', it doesn't crash the app because the input for the range doesn't exist. You let it here by default
+    
     const dice_A = document.getElementById('dados_cantidad');
     const dice_B = document.getElementById('dados_rango'); // This value is null if you choose the 'normal dice'
 
