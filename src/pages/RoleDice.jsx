@@ -1,24 +1,9 @@
-import React, { useState } from 'react';
-import Resultado from '@components/Resultado';
+import React from 'react';
 import ButtonThrow from '@components/ButtonThrow';
 
 import '@styles/RoleDice.scss';
 
-const NormalDice = () => {
-    const [showComponent, setShowComponent] = useState(false); // comienza en estado false
-    const [messageState, setMessageState] = useState(true);
-
-    let message;
-    if(messageState){
-        message = 'Throw dices'
-    } else {
-        message = 'Again?'
-    }
-
-    const handleClick = () => {
-      setShowComponent(!showComponent);
-      setMessageState(!messageState) // Al hacer click cambia el estado al hacerle un NOT al estado anterior
-    }
+const RoleDice = () => {
 
     return (
         <>
@@ -43,4 +28,4 @@ const NormalDice = () => {
     )
 }
 
-export default NormalDice;
+export default RoleDice;
