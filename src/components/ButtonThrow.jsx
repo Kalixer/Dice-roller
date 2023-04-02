@@ -4,7 +4,7 @@ import '@styles/ButtonThrow.scss';
 
 
 const ButtonThrow = () => {
-    const [showComponent, setShowComponent] = useState(false); // comienza en estado false
+    const [showComponent, setShowComponent] = useState(false);
 
     const handleThrow = () => {
 
@@ -13,7 +13,7 @@ const ButtonThrow = () => {
             setShowComponent(!showComponent); // Al hacer click cambia el estado al hacerle un NOT al estado anterior
         }
         // setMessageState(!messageState) // Al hacer click cambia el estado al hacerle un NOT al estado anterior
-      }
+      } 
 
     const handleReset = () => {
         if(showComponent == true) {
