@@ -9,7 +9,7 @@ const RoleDice = () => {
         <>
             <div className="encabezado">
                 <h1>Role Dices</h1>
-                <p className="e-paragraph">Choose how many dices you want</p>
+                <p className="e-paragraph">Choose how many dices and how many sides you want the dices to have</p>
             </div>
             <div className="input">
                 <div className="options">
