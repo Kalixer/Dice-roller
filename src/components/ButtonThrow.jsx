@@ -5,7 +5,7 @@ import '@styles/ButtonThrow.scss';
 
 const ButtonThrow = () => {
     const [showComponent, setShowComponent] = useState(false); // comienza en estado false
-    const [messageState, setMessageState] = useState(true);
+    const [messageState, setMessageState] = useState(false);
 
     let message;
     if(messageState){
@@ -14,16 +14,31 @@ const ButtonThrow = () => {
         message = 'Again?'
     }
 
-    const handleClick = () => {
-        setShowComponent(!showComponent); // Al hacer click cambia el estado al hacerle un NOT al estado anterior
-        setMessageState(!messageState) // Al hacer click cambia el estado al hacerle un NOT al estado anterior
+    const handleThrow = () => {
+
+        // Al hacerle el if, se salta el estado true y el resultado se vuelve a lanzar sin borrarse
+        if(showComponent == false) { 
+            setShowComponent(showComponent); // Al hacer click cambia el estado al hacerle un NOT al estado anterior
+        }
+        // setMessageState(!messageState) // Al hacer click cambia el estado al hacerle un NOT al estado anterior
       }
+
+    const handleReset = () => {
+        if(showComponent == true) {
+            setShowComponent(false)
+        }
+    }
 
     return (
         <>
-            <button type="button" className="buttonThrow" onClick={handleClick}>
-                <p>{message}</p>
-            </button>
+            <div className='buttons'>
+                <button type="button" className="buttonTh buttonThrow" onClick={handleThrow}>
+                    <p>Throw dices</p>
+                </button>
+                <button type="button" className="buttonTh buttonReset" onClick={handleReset}>
+                    <p>Reset</p>
+                </button>
+            </div>
             {showComponent && <Resultado />}
         </>
 

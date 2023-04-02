@@ -3,3 +3,4 @@ dist/
 # assets/
 oldfile.html
 src/diceCalculation.js
+src/routes/App.jsx
