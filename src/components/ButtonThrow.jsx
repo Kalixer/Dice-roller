@@ -5,20 +5,12 @@ import '@styles/ButtonThrow.scss';
 
 const ButtonThrow = () => {
     const [showComponent, setShowComponent] = useState(false); // comienza en estado false
-    const [messageState, setMessageState] = useState(false);
-
-    let message;
-    if(messageState){
-        message = 'Throw dices'
-    } else {
-        message = 'Again?'
-    }
 
     const handleThrow = () => {
 
         // Al hacerle el if, se salta el estado true y el resultado se vuelve a lanzar sin borrarse
         if(showComponent == false) { 
-            setShowComponent(showComponent); // Al hacer click cambia el estado al hacerle un NOT al estado anterior
+            setShowComponent(!showComponent); // Al hacer click cambia el estado al hacerle un NOT al estado anterior
         }
         // setMessageState(!messageState) // Al hacer click cambia el estado al hacerle un NOT al estado anterior
       }
