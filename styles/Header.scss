@@ -1,11 +1,13 @@
 .Nav {
     height: 10vh;
-    width: 99vw;
+    width: 100vw;
     background-color: black;
 
     display: flex;
     justify-content: start;
     align-items: center;
+
+    overflow-x: hidden;
 }
 
 .button-home {
