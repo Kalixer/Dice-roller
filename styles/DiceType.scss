@@ -22,7 +22,7 @@ h1 {
 }
 .choose-dice {
     // border: orange solid 2px;
-    width: 80vw;
+    width: 90vw;
 
     display: flex;
     justify-content: space-evenly;
@@ -64,6 +64,24 @@ h1 {
 .Type p {
     position: absolute;
     filter: drop-shadow(16px 16px 10px black);
+}
+.dice-type{
+    // border: blue solid 2px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.dice-type * {
+    margin: 1rem;
+}
+
+.dice-type p {
+    font-size: large;
+    // font-weight: bold;
+    color: white;
 }
 
 @media (max-width: 600px) {
