@@ -84,8 +84,13 @@ h1 {
     color: white;
 }
 
-@media (max-width: 600px) {
-    .Choose-dice{
+@media (max-width: 690px) {
+    .DiceType{
+        height: 70rem;
+    }
+    .choose-dice{
+        height: 60rem;
         flex-direction: column;
+        justify-content: space-around;
     }
 }
