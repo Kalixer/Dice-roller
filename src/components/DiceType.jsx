@@ -7,15 +7,20 @@ import '@styles/DiceType.scss';
 
 const DiceType = () => {
     return (
-        <main className="Choose-dice">
-            <Link className="Type"  to='/normal'>
-                <img src={redDices} alt=""/>
-                <p>Normal</p>
-            </Link>
-            <Link className="Type" to="/role">
-                <img src={roleDices} alt="" />
-                <p>Role / Custom</p>
-            </Link>
+        <main className="DiceType">
+            <div className='containment'>
+                <h1>Choose what kind of dice do you want</h1>
+                    <div className='choose-dice'>
+                        <Link className="Type"  to='/normal'>
+                            <img src={redDices} alt=""/>
+                            <p>Normal</p>
+                        </Link>
+                        <Link className="Type" to="/role">
+                            <img src={roleDices} alt="" />
+                            <p>Role / Custom</p>
+                        </Link>
+                    </div>
+            </div>
         </main>
     );
 }
