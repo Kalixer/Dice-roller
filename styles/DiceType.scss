@@ -18,7 +18,7 @@
 }
 h1 {
     text-align: center;
-    
+
     margin: 3rem;
     font-size: 3rem;
 }
@@ -94,5 +94,20 @@ h1 {
         height: 60rem;
         flex-direction: column;
         justify-content: space-around;
+    }
+}
+@media (max-width: 430px) {
+    .DiceType {
+        height: 85rem;
+    }
+    .choose-dice {
+        height: 65rem;
+    }
+    .Type {
+        height: 120px;
+        width: 200px;
+    }
+    .dice-type{
+        margin: 1.5rem;
     }
 }
