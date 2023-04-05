@@ -1,9 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Resultado from '@components/Resultado';
+import AppContext from '@context/AppContext';
+
 import '@styles/ButtonThrow.scss';
 
 
 const ButtonThrow = () => {
+    const { language } = useContext(AppContext)
+
+    let throwMessage
+    let resetMessage
+
+    if (language == 'english') {
+        throwMessage = 'Throw'
+        resetMessage = 'Reset'
+    }
+    if (language == 'spanish') {
+        throwMessage = 'Lanzar'
+        resetMessage = 'Resetear'
+    }
+
     const [showComponent, setShowComponent] = useState(false);
 
     const handleThrow = () => {
@@ -25,10 +41,10 @@ const ButtonThrow = () => {
         <>
             <div className='buttons'>
                 <button type="button" className="buttonTh buttonThrow" onClick={handleThrow}>
-                    <p>Throw dices</p>
+                    <p>{throwMessage}</p>
                 </button>
                 <button type="button" className="buttonTh buttonReset" onClick={handleReset}>
-                    <p>Reset</p>
+                    <p>{resetMessage}</p>
                 </button>
             </div>
             {showComponent && <Resultado />}
