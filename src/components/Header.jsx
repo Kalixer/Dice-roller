@@ -11,7 +11,7 @@ const Header = () => {
     const [langImage, setlangImage] = useState(lang_image)
 
     const handleClick = () => {
-        console.log('The actual language is: ' + language)
+        changeLanguage()
     }
     
     const change_to_blue = (dato) => {
