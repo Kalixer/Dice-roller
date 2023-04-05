@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import AppContext from "@context/AppContext";
 import dices from '@assets/dices.jsx';
 import '@styles/Resultado.scss';
 
@@ -11,6 +12,17 @@ function randomNumber(min, max){
 
 
 const Resultado = () => {
+    const { language } = useContext(AppContext)
+
+    let resultMessage
+
+    if (language == 'english') {
+        resultMessage = ' These are the results '
+    }
+    if (language == 'spanish') {
+        resultMessage = ' Estos son los resultados '
+    }
+
     let rango = 0; // This is for when you choose the 'normal dice', it doesn't crash the app because the input for the range doesn't exist. You let it here by default
     
     const dice_A = document.getElementById('dados_cantidad');
@@ -37,7 +49,7 @@ const Resultado = () => {
     
     return (
         <div className="main">
-            <p className="result" id="result">&#128071; These are the results &#128071;</p>
+            <p className="result" id="result">&#128071;{resultMessage}&#128071;</p>
             <div className="output" id="output">{output}</div>
         </div>
     );
@@ -46,43 +58,3 @@ const Resultado = () => {
 export default Resultado;
 
 
-
-// const result_text = document.getElementById('result');
-// const output = document.getElementById('output');
-
-// let resultado;
-// let loader = `
-//     <div class="loader" id="loader">
-//         <p>Loading...<p>
-//     </div>
-// `
-
-// output = loader
-
-// setTimeout(() => {
-//     output = ``
-
-//     for(let i = 0; i < diceAmount; i++) {
-//         resultado = randomNumber(1, diceRange);
-
-//         switch (resultado){
-//             case 1: output += `${dices[0]}`
-//             break;
-//             case 2: output += `${dices[1]}`
-//             break;
-//             case 3: output += `${dices[2]}`
-//             break;
-//             case 4: output += `${dices[3]}`
-//             break;
-//             case 5: output += `${dices[4]}`
-//             break;
-//             case 6: output += `${dices[5]}`
-//             break;
-
-//         }
-
-//     }
-//     result_text = `
-//     
-//     `
-// }, 100)
