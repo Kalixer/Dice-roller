@@ -4,16 +4,18 @@ import Layout from "@containers/Layout";
 import Home from "@pages/Home"
 import NormalDice from "@pages/NormalDice";
 import RoleDice from "@pages/RoleDice";
-import NotFound from "@pages/NotFound"
+import NotFound from "@pages/NotFound";
+import AppContext from "@context/AppContext";
+import useInitialState from "../hooks/useInitialState";
 
 import "@styles/global.css"
 
 
 const App = () => {
-    // const initialState = useInitalState();
+    const initialState = useInitialState()
 
     return (
-        // <AppContext.Provider value={initialState}>
+        <AppContext.Provider value={initialState}>
             <BrowserRouter basename="/Dice-roller/">
                 <Layout>
                     <Routes>
@@ -24,7 +26,7 @@ const App = () => {
                     </Routes>
                 </Layout>
             </BrowserRouter>
-        // </AppContext.Provider>
+        </AppContext.Provider>
     )
 }
 
